@@ -5,22 +5,22 @@
     android:animateLayoutChanges="true"
     android:orientation="horizontal">
 
-    <ImageView
+    <ImageButton
         android:id="@+id/iv_previous_month"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
-        android:paddingLeft="@dimen/space_2x"
-        android:paddingRight="@dimen/space_2x"
+        android:layout_marginStart="@dimen/space_2x"
+        android:background="?selectableItemBackgroundBorderless"
         android:src="@drawable/ic_chevron_left_gray" />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/iv_next_month"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end|center_vertical"
-        android:paddingLeft="@dimen/space_2x"
-        android:paddingRight="@dimen/space_2x"
+        android:layout_marginEnd="@dimen/space_2x"
+        android:background="?selectableItemBackgroundBorderless"
         android:src="@drawable/ic_chevron_right_gray" />
 
 </FrameLayout>

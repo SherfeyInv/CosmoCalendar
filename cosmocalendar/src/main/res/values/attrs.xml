@@ -64,5 +64,8 @@
             <flag name="sunday" value="64" />
         </attr>
 
+        <attr name="mothTextAppearance" format="reference" />
+        <attr name="dayTextAppearance" format="reference" />
+
     </declare-styleable>
 </resources>
