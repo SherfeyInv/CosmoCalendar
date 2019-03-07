@@ -1,14 +1,15 @@
 package com.applikeysolutions.cosmocalendar.adapter;
 
-import android.support.v7.widget.RecyclerView;
 import android.view.ViewGroup;
 
-import com.applikeysolutions.cosmocalendar.utils.Constants;
-import com.applikeysolutions.cosmocalendar.adapter.viewholder.OtherDayHolder;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.applikeysolutions.cosmocalendar.adapter.viewholder.DayHolder;
 import com.applikeysolutions.cosmocalendar.adapter.viewholder.DayOfWeekHolder;
+import com.applikeysolutions.cosmocalendar.adapter.viewholder.OtherDayHolder;
 import com.applikeysolutions.cosmocalendar.model.Day;
 import com.applikeysolutions.cosmocalendar.model.Month;
+import com.applikeysolutions.cosmocalendar.utils.Constants;
 import com.applikeysolutions.cosmocalendar.view.CalendarView;
 import com.applikeysolutions.cosmocalendar.view.ItemViewType;
 import com.applikeysolutions.cosmocalendar.view.delegate.DayDelegate;

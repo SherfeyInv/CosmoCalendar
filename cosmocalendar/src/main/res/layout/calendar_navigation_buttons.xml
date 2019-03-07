@@ -18,7 +18,7 @@
         android:id="@+id/iv_next_month"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="right|center_vertical"
+        android:layout_gravity="end|center_vertical"
         android:paddingLeft="@dimen/space_2x"
         android:paddingRight="@dimen/space_2x"
         android:src="@drawable/ic_chevron_right_gray" />

@@ -17,8 +17,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:paddingBottom="@dimen/space_1x"
-            android:paddingLeft="20dp"
-            android:paddingRight="@dimen/space_1x"
+            android:paddingStart="20dp"
+            android:paddingEnd="@dimen/space_1x"
             android:paddingTop="@dimen/space_1x"
             android:src="@drawable/ic_close_gray" />
 
@@ -26,10 +26,10 @@
             android:id="@+id/iv_done"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical|right"
+            android:layout_gravity="center_vertical|end"
             android:paddingBottom="@dimen/space_1x"
-            android:paddingLeft="@dimen/space_1x"
-            android:paddingRight="20dp"
+            android:paddingStart="@dimen/space_1x"
+            android:paddingEnd="20dp"
             android:paddingTop="@dimen/space_1x"
             android:src="@drawable/ic_done_gray" />
 

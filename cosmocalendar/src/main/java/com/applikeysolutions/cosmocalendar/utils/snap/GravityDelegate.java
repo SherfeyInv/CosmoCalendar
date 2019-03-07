@@ -2,14 +2,15 @@ package com.applikeysolutions.cosmocalendar.utils.snap;
 
 
 import android.os.Build;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.OrientationHelper;
-import android.support.v7.widget.RecyclerView;
 import android.view.Gravity;
 import android.view.View;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.OrientationHelper;
+import androidx.recyclerview.widget.RecyclerView;
 
 class GravityDelegate {
 
@@ -57,7 +58,7 @@ class GravityDelegate {
         this.listener = listener;
     }
 
-    public void setGravity(int gravity){
+    public void setGravity(int gravity) {
         this.gravity = gravity;
     }
 
