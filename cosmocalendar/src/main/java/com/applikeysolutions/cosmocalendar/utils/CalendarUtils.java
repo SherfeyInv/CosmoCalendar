@@ -5,13 +5,13 @@ import android.content.res.Resources;
 import android.graphics.BitmapFactory;
 import android.view.WindowManager;
 
-import com.applikeysolutions.cosmocalendar.settings.SettingsManager;
 import com.applikeysolutions.cosmocalendar.model.Day;
 import com.applikeysolutions.cosmocalendar.model.DayOfWeek;
 import com.applikeysolutions.cosmocalendar.model.Month;
 import com.applikeysolutions.cosmocalendar.selection.selectionbar.SelectionBarContentItem;
 import com.applikeysolutions.cosmocalendar.selection.selectionbar.SelectionBarItem;
 import com.applikeysolutions.cosmocalendar.selection.selectionbar.SelectionBarTitleItem;
+import com.applikeysolutions.cosmocalendar.settings.SettingsManager;
 import com.applikeysolutions.cosmocalendar.settings.lists.DisabledDaysCriteria;
 
 import java.text.SimpleDateFormat;
@@ -154,7 +154,7 @@ public final class CalendarUtils {
      */
     public static void setDay(Day day, SettingsManager settingsManager) {
         if (settingsManager.getWeekendDays() != null) {
-            day.setWeekend(settingsManager.getWeekendDays().contains(day.getCalendar().get(Calendar.DAY_OF_WEEK)));
+            day.setWeekend(settingsManager.getWeekendDays().contains((long) day.getCalendar().get(Calendar.DAY_OF_WEEK)));
         }
 
         if (settingsManager.getDisabledDays() != null) {
@@ -162,7 +162,7 @@ public final class CalendarUtils {
         }
 
         if (settingsManager.getDisabledDaysCriteria() != null) {
-            if(!day.isDisabled()){
+            if (!day.isDisabled()) {
                 day.setDisabled(isDayDisabledByCriteria(day, settingsManager.getDisabledDaysCriteria()));
             }
         }
@@ -185,7 +185,7 @@ public final class CalendarUtils {
 
     public static boolean isDayDisabledByCriteria(Day day, DisabledDaysCriteria criteria) {
         int field = -1;
-        switch (criteria.getCriteriaType()){
+        switch (criteria.getCriteriaType()) {
             case DAYS_OF_MONTH:
                 field = Calendar.DAY_OF_MONTH;
                 break;
@@ -195,15 +195,15 @@ public final class CalendarUtils {
                 break;
         }
 
-        for(int dayInt : criteria.getDays()){
-            if(dayInt == day.getCalendar().get(field)){
+        for (int dayInt : criteria.getDays()) {
+            if (dayInt == day.getCalendar().get(field)) {
                 return true;
             }
         }
         return false;
     }
 
-    public static int getIconHeight(Resources resources, int iconResId){
+    public static int getIconHeight(Resources resources, int iconResId) {
         BitmapFactory.Options options = new BitmapFactory.Options();
         options.inJustDecodeBounds = true;
         BitmapFactory.decodeResource(resources, iconResId, options);
