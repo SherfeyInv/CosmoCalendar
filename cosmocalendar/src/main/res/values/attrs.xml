@@ -20,7 +20,7 @@
             <enum name="none" value="3" />
         </attr>
 
-        <attr name="orientation" format="enum">
+        <attr name="orientationStyle" format="enum">
             <enum name="horizontal" value="0" />
             <enum name="vertical" value="1" />
         </attr>

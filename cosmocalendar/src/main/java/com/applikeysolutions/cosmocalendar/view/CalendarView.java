@@ -148,7 +148,7 @@ public class CalendarView extends RelativeLayout implements OnDaySelectedListene
      * @param typedArray
      */
     private void handleAttributes(TypedArray typedArray) {
-        int orientation = typedArray.getInteger(R.styleable.CalendarView_orientation, SettingsManager.DEFAULT_ORIENTATION);
+        int orientation = typedArray.getInteger(R.styleable.CalendarView_orientationStyle, SettingsManager.DEFAULT_ORIENTATION);
         int firstDayOfWeek = typedArray.getInteger(R.styleable.CalendarView_firstDayOfTheWeek, SettingsManager.DEFAULT_FIRST_DAY_OF_WEEK);
         int selectionType = typedArray.getInteger(R.styleable.CalendarView_selectionType, SettingsManager.DEFAULT_SELECTION_TYPE);
         boolean showDaysOfWeekTitle = orientation != LinearLayoutManager.HORIZONTAL;
