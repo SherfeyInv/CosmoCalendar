@@ -44,7 +44,7 @@ public class CircleAnimationTextView extends AppCompatTextView {
     private Paint backgroundRectanglePaint;
     private Rect backgroundRectangle;
 
-    public static final int DEFAULT_PADDING = 10;
+    public static final int DEFAULT_PADDING = 20;
     public static final int MAX_PROGRESS = 100;
     public static final long SELECTION_ANIMATION_DURATION = 300;
 
@@ -129,7 +129,8 @@ public class CircleAnimationTextView extends AppCompatTextView {
             createCirclePaint();
         }
 
-        final int diameter = getWidth() - DEFAULT_PADDING * 2;
+        final int size = Math.min(getWidth(), getHeight());
+        final int diameter = size - DEFAULT_PADDING * 2;
         final int diameterProgress = animationProgress * diameter / MAX_PROGRESS;
 
         setBackgroundColor(Color.TRANSPARENT);
@@ -140,7 +141,8 @@ public class CircleAnimationTextView extends AppCompatTextView {
         if (circleUnderPaint == null || stateChanged) {
             createCircleUnderPaint();
         }
-        final int diameter = getWidth() - DEFAULT_PADDING * 2;
+        final int size = Math.min(getWidth(), getHeight());
+        final int diameter = size - DEFAULT_PADDING * 2;
         canvas.drawCircle(getWidth() / 2, getHeight() / 2, diameter / 2, circleUnderPaint);
     }
 
