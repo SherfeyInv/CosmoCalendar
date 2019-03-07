@@ -1,5 +1,6 @@
 package com.applikeysolutions.cosmocalendar.adapter.viewholder;
 
+import android.os.Build;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -37,6 +38,10 @@ public class MonthHolder extends RecyclerView.ViewHolder {
     }
 
     public void bind(Month month) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            tvMonthName.setTextAppearance(appearanceModel.getMonthTextAppearance());
+        }
+
         tvMonthName.setText(month.getMonthName());
         tvMonthName.setTextColor(appearanceModel.getMonthTextColor());
 

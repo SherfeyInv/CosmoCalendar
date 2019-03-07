@@ -174,8 +174,8 @@ public class CalendarView extends RelativeLayout implements OnDaySelectedListene
         int previousMonthIconRes = typedArray.getResourceId(R.styleable.CalendarView_previousMonthIconRes, R.drawable.ic_chevron_left_gray);
         int nextMonthIconRes = typedArray.getResourceId(R.styleable.CalendarView_nextMonthIconRes, R.drawable.ic_chevron_right_gray);
 
-        int monthTextAppearance = typedArray.getResourceId(R.styleable.CalendarView_mothTextAppearance, R.drawable.ic_chevron_right_gray);
-        int dayTextAppearance = typedArray.getResourceId(R.styleable.CalendarView_dayTextAppearance, R.drawable.ic_chevron_right_gray);
+        int monthTextAppearance = typedArray.getResourceId(R.styleable.CalendarView_monthTextAppearance, 0);
+        int dayTextAppearance = typedArray.getResourceId(R.styleable.CalendarView_dayTextAppearance, 0);
 
         setBackgroundColor(calendarBackgroundColor);
         settingsManager.setCalendarBackgroundColor(calendarBackgroundColor);
@@ -203,6 +203,8 @@ public class CalendarView extends RelativeLayout implements OnDaySelectedListene
         settingsManager.setSelectionType(selectionType);
         settingsManager.setPreviousMonthIconRes(previousMonthIconRes);
         settingsManager.setNextMonthIconRes(nextMonthIconRes);
+        settingsManager.setDayTextAppearance(dayTextAppearance);
+        settingsManager.setMonthTextAppearance(monthTextAppearance);
     }
 
     private void handleWeekendDaysAttributes(TypedArray typedArray) {
@@ -940,6 +942,28 @@ public class CalendarView extends RelativeLayout implements OnDaySelectedListene
     public void setCurrentDaySelectedIconRes(int currentDaySelectedIconRes) {
         settingsManager.setCurrentDaySelectedIconRes(currentDaySelectedIconRes);
         update();
+    }
+
+    @Override
+    public void setDayTextAppearance(int dayTextAppearance) {
+        settingsManager.setDayTextAppearance(dayTextAppearance);
+        update();
+    }
+
+    @Override
+    public void setMonthTextAppearance(int monthTextAppearance) {
+        settingsManager.setMonthTextAppearance(monthTextAppearance);
+        update();
+    }
+
+    @Override
+    public int getDayTextAppearance() {
+        return settingsManager.getDayTextAppearance();
+    }
+
+    @Override
+    public int getMonthTextAppearance() {
+        return settingsManager.getMonthTextAppearance();
     }
 
     @Override

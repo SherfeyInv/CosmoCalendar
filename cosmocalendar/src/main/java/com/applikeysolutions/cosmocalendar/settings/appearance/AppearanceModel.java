@@ -76,6 +76,9 @@ public class AppearanceModel implements AppearanceInterface {
     //Defines if we need to display week day title for whole calendar
     private boolean showDaysOfWeekTitle;
 
+    private int dayTextAppearance;
+
+    private int monthTextAppearance;
 
     @Override
     public int getCalendarBackgroundColor() {
@@ -305,5 +308,25 @@ public class AppearanceModel implements AppearanceInterface {
     @Override
     public void setShowDaysOfWeekTitle(boolean showDaysOfWeekTitle) {
         this.showDaysOfWeekTitle = showDaysOfWeekTitle;
+    }
+
+    @Override
+    public void setDayTextAppearance(int dayTextAppearance) {
+        this.dayTextAppearance = dayTextAppearance;
+    }
+
+    @Override
+    public void setMonthTextAppearance(int monthTextAppearance) {
+        this.monthTextAppearance = monthTextAppearance;
+    }
+
+    @Override
+    public int getDayTextAppearance() {
+        return dayTextAppearance;
+    }
+
+    @Override
+    public int getMonthTextAppearance() {
+        return monthTextAppearance;
     }
 }

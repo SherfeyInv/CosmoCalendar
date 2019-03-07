@@ -393,4 +393,24 @@ public class CalendarDialog extends Dialog implements View.OnClickListener,
     public void setFirstDayOfWeek(int firstDayOfWeek) {
         calendarView.setFirstDayOfWeek(firstDayOfWeek);
     }
+
+    @Override
+    public void setDayTextAppearance(int dayTextAppearance) {
+        calendarView.setDayTextAppearance(dayTextAppearance);
+    }
+
+    @Override
+    public void setMonthTextAppearance(int monthTextAppearance) {
+        calendarView.setMonthTextAppearance(monthTextAppearance);
+    }
+
+    @Override
+    public int getDayTextAppearance() {
+        return calendarView.getDayTextAppearance();
+    }
+
+    @Override
+    public int getMonthTextAppearance() {
+        return calendarView.getMonthTextAppearance();
+    }
 }

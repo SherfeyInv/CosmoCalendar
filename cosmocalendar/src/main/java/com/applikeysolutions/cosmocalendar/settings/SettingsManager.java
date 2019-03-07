@@ -332,4 +332,24 @@ public class SettingsManager implements AppearanceInterface, DateInterface, Cale
     public void setFirstDayOfWeek(int firstDayOfWeek) {
         dateModel.setFirstDayOfWeek(firstDayOfWeek);
     }
+
+    @Override
+    public void setDayTextAppearance(int dayTextAppearance) {
+        appearanceModel.setDayTextAppearance(dayTextAppearance);
+    }
+
+    @Override
+    public void setMonthTextAppearance(int monthTextAppearance) {
+        appearanceModel.setMonthTextAppearance(monthTextAppearance);
+    }
+
+    @Override
+    public int getDayTextAppearance() {
+        return appearanceModel.getDayTextAppearance();
+    }
+
+    @Override
+    public int getMonthTextAppearance() {
+        return appearanceModel.getMonthTextAppearance();
+    }
 }
