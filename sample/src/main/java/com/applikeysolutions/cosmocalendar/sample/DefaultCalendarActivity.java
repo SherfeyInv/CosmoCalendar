@@ -1,6 +1,5 @@
 package com.applikeysolutions.cosmocalendar.sample;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -55,6 +54,10 @@ public class DefaultCalendarActivity extends AppCompatActivity implements RadioG
         calendarView = (CalendarView) findViewById(R.id.calendar_view);
         ((RadioGroup) findViewById(R.id.rg_orientation)).setOnCheckedChangeListener(this);
         ((RadioGroup) findViewById(R.id.rg_selection_type)).setOnCheckedChangeListener(this);
+
+        Calendar calendar = Calendar.getInstance();
+        calendar.add(Calendar.MONTH, 1);
+        calendarView.setIntialDate(calendar);
     }
 
     private void createCriterias() {

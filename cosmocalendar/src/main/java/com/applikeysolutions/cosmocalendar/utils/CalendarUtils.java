@@ -93,10 +93,9 @@ public final class CalendarUtils {
         return titles;
     }
 
-    public static List<Month> createInitialMonths(SettingsManager settingsManager) {
+    public static List<Month> createInitialMonths(Calendar calendar, SettingsManager settingsManager) {
         final List<Month> months = new ArrayList<>();
 
-        final Calendar calendar = Calendar.getInstance();
         for (int i = 0; i < SettingsManager.DEFAULT_MONTH_COUNT / 2; i++) {
             calendar.add(Calendar.MONTH, -1);
         }
