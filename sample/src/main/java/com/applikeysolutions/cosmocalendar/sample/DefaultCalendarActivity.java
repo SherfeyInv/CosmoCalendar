@@ -57,7 +57,7 @@ public class DefaultCalendarActivity extends AppCompatActivity implements RadioG
 
         Calendar calendar = Calendar.getInstance();
         calendar.add(Calendar.MONTH, 1);
-        calendarView.setIntialDate(calendar);
+        calendarView.setInitialDate(calendar);
     }
 
     private void createCriterias() {

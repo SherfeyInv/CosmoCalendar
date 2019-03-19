@@ -635,7 +635,7 @@ public class CalendarView extends RelativeLayout implements OnDaySelectedListene
         lastVisibleMonthPosition = SettingsManager.DEFAULT_MONTH_COUNT / 2;
     }
 
-    public void setIntialDate(Calendar calendar) {
+    public void setInitialDate(Calendar calendar) {
         monthAdapter.getData().clear();
         monthAdapter.getData().addAll(CalendarUtils.createInitialMonths(calendar, settingsManager));
         lastVisibleMonthPosition = SettingsManager.DEFAULT_MONTH_COUNT / 2;
