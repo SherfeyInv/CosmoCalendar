@@ -727,9 +727,9 @@ public class CalendarView extends RelativeLayout implements OnDaySelectedListene
      * Sets selection bar layout visibility
      */
     private void setSelectionBarVisibility() {
-        flBottomSelectionBar.setVisibility(getCalendarOrientation() == OrientationHelper.HORIZONTAL ? View.VISIBLE : View.GONE);
+/*        flBottomSelectionBar.setVisibility(getCalendarOrientation() == OrientationHelper.HORIZONTAL ? View.VISIBLE : View.GONE);
         rvMultipleSelectedList.setVisibility(getCalendarOrientation() == OrientationHelper.HORIZONTAL && getSelectionType() == SelectionType.MULTIPLE ? View.VISIBLE : View.GONE);
-        llRangeSelection.setVisibility(needToShowSelectedDaysRange() ? View.VISIBLE : View.GONE);
+        llRangeSelection.setVisibility(needToShowSelectedDaysRange() ? View.VISIBLE : View.GONE);*/
     }
 
     @Override
