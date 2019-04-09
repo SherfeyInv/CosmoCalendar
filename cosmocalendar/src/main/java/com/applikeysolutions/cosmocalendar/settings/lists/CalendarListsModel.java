@@ -13,7 +13,7 @@ public class CalendarListsModel implements CalendarListsInterface {
     //Disabled days cannot be selected
     private Set<Long> disabledDays = new TreeSet<>();
 
-    private DisabledDaysCriteria disabledDaysCriteria;
+    private DaysCriteria disabledDaysCriteria;
 
     //Custom connected days for displaying in calendar
     private ConnectedDaysManager connectedDaysManager = ConnectedDaysManager.getInstance();
@@ -38,7 +38,7 @@ public class CalendarListsModel implements CalendarListsInterface {
     }
 
     @Override
-    public DisabledDaysCriteria getDisabledDaysCriteria() {
+    public DaysCriteria getDaysCriteria() {
         return disabledDaysCriteria;
     }
 
@@ -52,8 +52,7 @@ public class CalendarListsModel implements CalendarListsInterface {
         this.weekendDays = weekendDays;
     }
 
-    @Override
-    public void setDisabledDaysCriteria(DisabledDaysCriteria criteria) {
+    public void setDaysCriteria(DaysCriteria criteria) {
         this.disabledDaysCriteria = criteria;
     }
 

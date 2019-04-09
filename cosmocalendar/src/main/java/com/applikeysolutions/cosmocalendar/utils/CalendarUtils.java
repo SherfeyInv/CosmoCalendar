@@ -12,7 +12,6 @@ import com.applikeysolutions.cosmocalendar.selection.selectionbar.SelectionBarCo
 import com.applikeysolutions.cosmocalendar.selection.selectionbar.SelectionBarItem;
 import com.applikeysolutions.cosmocalendar.selection.selectionbar.SelectionBarTitleItem;
 import com.applikeysolutions.cosmocalendar.settings.SettingsManager;
-import com.applikeysolutions.cosmocalendar.settings.lists.DisabledDaysCriteria;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -160,9 +159,9 @@ public final class CalendarUtils {
             day.setDisabled(isDayInSet(day, settingsManager.getDisabledDays()));
         }
 
-        if (settingsManager.getDisabledDaysCriteria() != null) {
+        if (settingsManager.getDaysCriteria() != null) {
             if (!day.isDisabled()) {
-                day.setDisabled(isDayDisabledByCriteria(day, settingsManager.getDisabledDaysCriteria()));
+                day.setDisabled(settingsManager.getDaysCriteria().isDayDisabled(day));
             }
         }
 
@@ -176,26 +175,6 @@ public final class CalendarUtils {
             Calendar disabledDayCalendar = DateUtils.getCalendar(disabledTime);
             if (day.getCalendar().get(Calendar.YEAR) == disabledDayCalendar.get(Calendar.YEAR)
                     && day.getCalendar().get(Calendar.DAY_OF_YEAR) == disabledDayCalendar.get(Calendar.DAY_OF_YEAR)) {
-                return true;
-            }
-        }
-        return false;
-    }
-
-    public static boolean isDayDisabledByCriteria(Day day, DisabledDaysCriteria criteria) {
-        int field = -1;
-        switch (criteria.getCriteriaType()) {
-            case DAYS_OF_MONTH:
-                field = Calendar.DAY_OF_MONTH;
-                break;
-
-            case DAYS_OF_WEEK:
-                field = Calendar.DAY_OF_WEEK;
-                break;
-        }
-
-        for (int dayInt : criteria.getDays()) {
-            if (dayInt == day.getCalendar().get(field)) {
                 return true;
             }
         }

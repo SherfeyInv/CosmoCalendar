@@ -10,7 +10,7 @@ import com.applikeysolutions.cosmocalendar.settings.date.DateInterface;
 import com.applikeysolutions.cosmocalendar.settings.date.DateModel;
 import com.applikeysolutions.cosmocalendar.settings.lists.CalendarListsInterface;
 import com.applikeysolutions.cosmocalendar.settings.lists.CalendarListsModel;
-import com.applikeysolutions.cosmocalendar.settings.lists.DisabledDaysCriteria;
+import com.applikeysolutions.cosmocalendar.settings.lists.DaysCriteria;
 import com.applikeysolutions.cosmocalendar.settings.lists.connected_days.ConnectedDays;
 import com.applikeysolutions.cosmocalendar.settings.lists.connected_days.ConnectedDaysManager;
 import com.applikeysolutions.cosmocalendar.settings.selection.SelectionInterface;
@@ -299,8 +299,8 @@ public class SettingsManager implements AppearanceInterface, DateInterface, Cale
     }
 
     @Override
-    public DisabledDaysCriteria getDisabledDaysCriteria() {
-        return calendarListsModel.getDisabledDaysCriteria();
+    public DaysCriteria getDaysCriteria() {
+        return calendarListsModel.getDaysCriteria();
     }
 
     @Override
@@ -314,8 +314,8 @@ public class SettingsManager implements AppearanceInterface, DateInterface, Cale
     }
 
     @Override
-    public void setDisabledDaysCriteria(DisabledDaysCriteria criteria) {
-        calendarListsModel.setDisabledDaysCriteria(criteria);
+    public void setDaysCriteria(DaysCriteria criteria) {
+        calendarListsModel.setDaysCriteria(criteria);
     }
 
     @Override

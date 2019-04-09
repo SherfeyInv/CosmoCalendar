@@ -13,13 +13,13 @@ public interface CalendarListsInterface {
 
     Set<Long> getWeekendDays();
 
-    DisabledDaysCriteria getDisabledDaysCriteria();
+    DaysCriteria getDaysCriteria();
 
     void setDisabledDays(Set<Long> disabledDays);
 
     void setWeekendDays(Set<Long> weekendDays);
 
-    void setDisabledDaysCriteria(DisabledDaysCriteria criteria);
+    void setDaysCriteria(DaysCriteria criteria);
 
     void addConnectedDays(ConnectedDays connectedDays);
 }

@@ -15,17 +15,17 @@ import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 
-import com.applikeysolutions.cosmocalendar.settings.lists.DisabledDaysCriteria;
-import com.applikeysolutions.cosmocalendar.settings.lists.connected_days.ConnectedDays;
-import com.applikeysolutions.cosmocalendar.settings.lists.connected_days.ConnectedDaysManager;
-import com.applikeysolutions.cosmocalendar.utils.SelectionType;
-import com.applikeysolutions.customizablecalendar.R;
 import com.applikeysolutions.cosmocalendar.model.Day;
 import com.applikeysolutions.cosmocalendar.settings.appearance.AppearanceInterface;
 import com.applikeysolutions.cosmocalendar.settings.date.DateInterface;
 import com.applikeysolutions.cosmocalendar.settings.lists.CalendarListsInterface;
+import com.applikeysolutions.cosmocalendar.settings.lists.DaysCriteria;
+import com.applikeysolutions.cosmocalendar.settings.lists.connected_days.ConnectedDays;
+import com.applikeysolutions.cosmocalendar.settings.lists.connected_days.ConnectedDaysManager;
 import com.applikeysolutions.cosmocalendar.settings.selection.SelectionInterface;
+import com.applikeysolutions.cosmocalendar.utils.SelectionType;
 import com.applikeysolutions.cosmocalendar.view.CalendarView;
+import com.applikeysolutions.customizablecalendar.R;
 
 import java.util.List;
 import java.util.Set;
@@ -360,8 +360,8 @@ public class CalendarDialog extends Dialog implements View.OnClickListener,
     }
 
     @Override
-    public DisabledDaysCriteria getDisabledDaysCriteria() {
-        return calendarView.getDisabledDaysCriteria();
+    public DaysCriteria getDaysCriteria() {
+        return calendarView.getDaysCriteria();
     }
 
     @Override
@@ -375,8 +375,8 @@ public class CalendarDialog extends Dialog implements View.OnClickListener,
     }
 
     @Override
-    public void setDisabledDaysCriteria(DisabledDaysCriteria criteria) {
-        calendarView.setDisabledDaysCriteria(criteria);
+    public void setDaysCriteria(DaysCriteria criteria) {
+        calendarView.setDaysCriteria(criteria);
     }
 
     @Override

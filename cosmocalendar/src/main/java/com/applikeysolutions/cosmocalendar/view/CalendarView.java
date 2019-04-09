@@ -45,7 +45,7 @@ import com.applikeysolutions.cosmocalendar.settings.SettingsManager;
 import com.applikeysolutions.cosmocalendar.settings.appearance.AppearanceInterface;
 import com.applikeysolutions.cosmocalendar.settings.date.DateInterface;
 import com.applikeysolutions.cosmocalendar.settings.lists.CalendarListsInterface;
-import com.applikeysolutions.cosmocalendar.settings.lists.DisabledDaysCriteria;
+import com.applikeysolutions.cosmocalendar.settings.lists.DaysCriteria;
 import com.applikeysolutions.cosmocalendar.settings.lists.connected_days.ConnectedDays;
 import com.applikeysolutions.cosmocalendar.settings.lists.connected_days.ConnectedDaysManager;
 import com.applikeysolutions.cosmocalendar.settings.selection.SelectionInterface;
@@ -534,8 +534,8 @@ public class CalendarView extends RelativeLayout implements OnDaySelectedListene
     }
 
     @Override
-    public DisabledDaysCriteria getDisabledDaysCriteria() {
-        return settingsManager.getDisabledDaysCriteria();
+    public DaysCriteria getDaysCriteria() {
+        return settingsManager.getDaysCriteria();
     }
 
     public void setDisabledDays(Set<Long> disabledDays) {
@@ -549,9 +549,9 @@ public class CalendarView extends RelativeLayout implements OnDaySelectedListene
     }
 
     @Override
-    public void setDisabledDaysCriteria(DisabledDaysCriteria criteria) {
-        settingsManager.setDisabledDaysCriteria(criteria);
-        monthAdapter.setDisabledDaysCriteria(criteria);
+    public void setDaysCriteria(DaysCriteria criteria) {
+        settingsManager.setDaysCriteria(criteria);
+        monthAdapter.setDaysCriteria(criteria);
     }
 
     @Override
