@@ -680,7 +680,7 @@ public class CalendarView extends RelativeLayout implements OnDaySelectedListene
         if (selectionManager instanceof RangeSelectionManager) {
             Pair<Day, Day> days = ((RangeSelectionManager) selectionManager).getDays();
             if (days != null) {
-                llRangeSelection.setVisibility(VISIBLE);
+                //llRangeSelection.setVisibility(VISIBLE);
                 TextView tvStartRangeTitle = (TextView) llRangeSelection.findViewById(R.id.tv_range_start_date);
                 tvStartRangeTitle.setText(CalendarUtils.getYearNameTitle(days.first));
                 tvStartRangeTitle.setTextColor(getSelectionBarMonthTextColor());
