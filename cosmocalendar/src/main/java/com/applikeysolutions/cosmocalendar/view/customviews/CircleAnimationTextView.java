@@ -227,7 +227,7 @@ public class CircleAnimationTextView extends AppCompatTextView {
 
     private Rect getRectangleForState() {
         final int size = Math.min(getWidth(), getHeight());
-        final int diameter = size - DEFAULT_PADDING;
+        final int diameter = size;
         switch (selectionState) {
             case START_RANGE_DAY:
                 return new Rect(getWidth() / 2, getHeight() - diameter, getWidth(), diameter);
