@@ -101,6 +101,8 @@ public class CalendarView extends RelativeLayout implements OnDaySelectedListene
 
     private FetchMonthsAsyncTask asyncTask;
 
+    private OnDaySelectedListener onDaySelectedListener = null;
+
     public CalendarView(Context context) {
         super(context);
         init();
@@ -645,6 +647,9 @@ public class CalendarView extends RelativeLayout implements OnDaySelectedListene
     public void onDaySelected() {
         selectedDays = getSelectedDays();
         displaySelectedDays();
+        if (onDaySelectedListener != null) {
+            onDaySelectedListener.onDaySelected();
+        }
     }
 
     /**
@@ -1097,6 +1102,10 @@ public class CalendarView extends RelativeLayout implements OnDaySelectedListene
 
     public void setOnMonthChangeListener(OnMonthChangeListener onMonthChangeListener) {
         this.onMonthChangeListener = onMonthChangeListener;
+    }
+
+    public void setOnDaySelectedListener(OnDaySelectedListener onDaySelectedListener) {
+        this.onDaySelectedListener = onDaySelectedListener;
     }
 
     @Override
